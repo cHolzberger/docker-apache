@@ -55,4 +55,5 @@ ENV APACHE_DOCUMENTROOT /var/www
 EXPOSE 80
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
+COPY www-data /var/www
 CMD ["bash", "start.sh"]
