@@ -56,5 +56,5 @@ EXPOSE 80
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 COPY www-data /var/www
-COPY ssl/ca-chain.cert.pem /etc/ss /etc/ssl
+COPY ssl/ca-chain.cert.pem /etc/ssl
 CMD ["bash", "start.sh"]
