@@ -37,7 +37,7 @@ RUN sed -i 's/\;include_path = ".:\/usr\/share\/php"/include_path = ".:\/var\/ww
 # Activate a2enmod
 RUN a2enmod rewrite
 
-ADD ./001-docker.conf /etc/apache2/sites-available/
+ADD ./apache/ssl-host.conf /etc/apache2/sites-available/
 RUN ln -s /etc/apache2/sites-available/001-docker.conf /etc/apache2/sites-enabled/
 
 # Set Apache environment variables (can be changed on docker run with -e)
@@ -56,4 +56,5 @@ EXPOSE 80
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 COPY www-data /var/www
+COPY ssl/ca-chain.cert.pem /etc/ss /etc/ssl
 CMD ["bash", "start.sh"]
