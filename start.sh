@@ -1,5 +1,6 @@
 #!/bin/bash
 
 # Start apache
-/usr/sbin/apache2 -D FOREGROUND
-cat /var/log/apache2/error.log
+apache2ctl start
+
+tail -f /var/log/apache2/error.log
