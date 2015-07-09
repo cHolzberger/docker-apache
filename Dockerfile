@@ -39,7 +39,7 @@ RUN a2enmod rewrite
 RUN a2enmod ssl 
 
 ADD ./apache/ssl-host.conf /etc/apache2/sites-available/
-RUN ln -s /etc/apache2/sites-available/001-docker.conf /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/ssl-host.conf /etc/apache2/sites-enabled/
 
 # Set Apache environment variables (can be changed on docker run with -e)
 ENV APACHE_RUN_USER www-data
@@ -57,6 +57,5 @@ EXPOSE 80
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 COPY www-data /var/www
-#RUN mkdir /etc/ssl
-#COPY ./ssl/ca-chain.cert.pem /etc/ssl
+COPY ./ssl/ /etc/ssl/
 CMD ["bash", "start.sh"]
