@@ -21,7 +21,7 @@ RUN echo "deb http://packages.dotdeb.org wheezy-php55 all" >> /etc/apt/sources.l
 	wget -O- http://www.dotdeb.org/dotdeb.gpg | apt-key add -
 
 # Install PHP 5.5
-RUN apt-get update; apt-get install -y php5-cli php5 php5-mcrypt php5-curl php5-pgsql php5-mysql
+RUN apt-get update; apt-get install -y vim php5-cli php5 php5-mcrypt php5-curl php5-pgsql php5-mysql
  
 # Let's set the default timezone in both cli and apache configs
 RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Stockholm/g' /etc/php5/cli/php.ini
@@ -37,6 +37,9 @@ RUN sed -i 's/\;include_path = ".:\/usr\/share\/php"/include_path = ".:\/var\/ww
 # Activate a2enmod
 RUN a2enmod rewrite
 RUN a2enmod ssl 
+
+#deactivate default host
+RUN a2dissite 000-default
 
 ADD ./apache/ssl-host.conf /etc/apache2/sites-available/
 RUN ln -s /etc/apache2/sites-available/ssl-host.conf /etc/apache2/sites-enabled/
