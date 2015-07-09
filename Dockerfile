@@ -61,4 +61,6 @@ ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 COPY www-data /var/www
 COPY ./ssl/ /etc/ssl/certs/
+RUN chown www-data:www-data /var/log/apache2 
+RUN mkdir /tmp/stapling_cache
 CMD ["bash", "start.sh"]
