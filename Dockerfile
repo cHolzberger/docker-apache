@@ -56,11 +56,11 @@ ENV APACHE_SERVERNAME localhost
 ENV APACHE_SERVERALIAS docker.localhost
 ENV APACHE_DOCUMENTROOT /var/www
 
-EXPOSE 80 443
+EXPOSE 80 443 444
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 COPY www-data /var/www
 COPY ./ssl/ /etc/ssl/certs/
+COPY ./ca-ssl/ /etc/ssl/auth/
 RUN chown www-data:www-data /var/log/apache2 
-RUN mkdir /tmp/stapling_cache
 CMD ["bash", "start.sh"]
