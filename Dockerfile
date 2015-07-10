@@ -41,9 +41,11 @@ RUN a2enmod ssl
 #deactivate default host
 RUN a2dissite 000-default
 
-ADD ./apache/ssl-host.conf /etc/apache2/sites-available/
-RUN ln -s /etc/apache2/sites-available/ssl-host.conf /etc/apache2/sites-enabled/
-
+ADD ./apache/ /etc/apache2/sites-available/
+RUN a2ensite ssl-host
+RUN a2ensite ssl-host-444 
+RUN a2ensite ssl-host-445
+RUN a2ensite ssl-host-443
 # Set Apache environment variables (can be changed on docker run with -e)
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
