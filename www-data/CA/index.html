@@ -51,7 +51,7 @@
 		<li>Python-Bibliothek pyOpenSSL</li>
 	</ul>
 	</li>
-	<li>Watcher auf Index.txt-Datenbank für Aktualisierungen</li>
+	<li>Watcher auf Zertifikatsliste für Aktualisierungen</li>
 </ul>
 </div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="c8181199cb4f7c78dbfe84daa55b9e15"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
 <h2>Services der CA</h2>
@@ -135,25 +135,27 @@
 	<li>extendedKeyUsage = clientAuth, emailProtection<br>
 	(Public Key für Client-Authentifizerung &amp; Email-Schutz)</li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 410px; left: 50px; top: 175px; height: auto;" data-block-id="dd0337396f2b2dd3ec61a35cfe064f0b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 410px; left: 50px; top: 140px; height: auto;" data-block-id="dd0337396f2b2dd3ec61a35cfe064f0b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
 <h2>Ablauf</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 439px; left: 50px; top: 271px; height: auto;" data-block-id="f73d1f6f56898d15daeb47008f64be98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12;">
+<div class="sl-block" data-block-type="text" style="width: 439px; left: 50px; top: 210px; height: auto;" data-block-id="f73d1f6f56898d15daeb47008f64be98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12;">
 <ul>
 	<li>Das signierte X509-Zertifikat wird in ein PKCS#12-Objekt übertragen</li>
 	<li>PKCS#12 erhält zusätzlich den privaten Schlüssel</li>
 	<li>PKCS#12 durch Passwort geschützt</li>
 	<li>PKCS#12 und Passwort werden binär exportiert und als Paket zur RA geschickt</li>
+	<li>Interner, sicherer Kanal</li>
+	<li>Benachrichtigung der VA</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 410px; left: 500px; top: 175px; height: auto;" data-block-id="247807d53d8d5a3449f0506aeec6852b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 13;">
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 500px; top: 140px; height: auto;" data-block-id="247807d53d8d5a3449f0506aeec6852b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 13;">
 <h2>Visualisierung</h2>
 </div></div>
 
 <div class="sl-block" data-block-type="text" style="width: 823px; left: 69px; top: 33px; height: auto;" data-block-id="139866b70d85936e7ea72f855699c121"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 14;">
 <h2>Der Rückweg des Zertifikats</h2>
 </div></div>
-<div class="sl-block" data-block-type="image" data-block-id="0f74b344aad02d5291ec6c7ad305d1b8" style="min-width: 30px; min-height: 30px; width: 411.371764705882px; height: 359px; left: 500px; top: 271px;"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="487" data-natural-height="425" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1563755/8_CA_PKCS12_RA.JPG"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="d6828fafd8f1a2bb11108fe7586010fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<div class="sl-block" data-block-type="image" data-block-id="0f74b344aad02d5291ec6c7ad305d1b8" style="min-width: 30px; min-height: 30px; width: 411.371764705882px; height: 359px; left: 500px; top: 244px;"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="487" data-natural-height="425" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1563755/8_CA_PKCS12_RA.JPG"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 190px; height: auto;" data-block-id="d6828fafd8f1a2bb11108fe7586010fa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Bearbeiten eines Signierungsantrags</h1>
 </div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 103px; height: auto;" data-block-id="a822d1bf2fc0e9b53fa5edb3b1466744"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Schnittstelle zur RA</h2>
@@ -167,6 +169,7 @@
 		<li>inklusive des öffentlichen Schlüssels</li>
 	</ul>
 	</li>
+	<li>Privater Schlüssel verbleibt beim Benutzer</li>
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="image" data-block-id="5fe16c8a1b9643e0bb15ca92b0378af0" style="min-width: 30px; min-height: 30px; width: 500.681481481481px; height: 119px; left: 230px; top: 490px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="568" data-natural-height="135" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1561237/4_RA_CSR_CA.JPG"></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 410px; left: 50px; top: 155px; height: auto;" data-block-id="b8f0f4bc925d8b34b6a73222085dc6fc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
@@ -208,6 +211,7 @@
 <ul>
 	<li>Das signierte X509-Zertifikat wird in ein binäres Format exportiert</li>
 	<li>Die exportierte Binärdatei wird an die RA zurückgeschickt</li>
+	<li>Benachrichtigung der VA</li>
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 410px; left: 500px; top: 175px; height: auto;" data-block-id="a1d4c266507afc0b08d7a55e82ca86a3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 13;">
@@ -226,9 +230,10 @@
 <ul>
 	<li>RA beantragt Rückruf eines Zertifikats</li>
 	<li>Identifikation des Zertifikats per Benutzerdaten</li>
+	<li>Zurückrufen von existierendem Zertifikat, wenn neues Zertifikat mit gleichen Benutzerdaten beantragt wird</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="image" data-block-id="d8c1bfd5f8b19bb32075f5c0eeaba599" style="min-width: 30px; min-height: 30px; width: 589.69696969697px; height: 140px; left: 185px; top: 420px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="556" data-natural-height="132" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1563505/7_RA_UserDataRevoke_CA.JPG"></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 81px; height: auto;" data-block-id="de70c1913ca377cc88122d64e366ed97"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="image" data-block-id="d8c1bfd5f8b19bb32075f5c0eeaba599" style="min-width: 30px; min-height: 30px; width: 589.69696969697px; height: 140px; left: 186px; top: 462px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="556" data-natural-height="132" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1563505/7_RA_UserDataRevoke_CA.JPG"></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 81px; height: auto;" data-block-id="de70c1913ca377cc88122d64e366ed97"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Verarbeitung des Rückrufs</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 155px; height: auto;" data-block-id="01995b180cc02357a2baa656de9147cb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -242,7 +247,8 @@
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="image" data-block-id="3553f6672b31e1c89bb11e9e3d46faba" style="min-width: 30px; min-height: 30px; width: 640px; height: 226.633416458853px; left: 160px; top: 420px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="802" data-natural-height="284" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/352486/images/1563506/6_Revoke.JPG"></div></div></section></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="23f634543f1a8618f0311c8a30ae66e1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Vielen Dank für Ihr Vertrauen in unsere CA!</h1>
+<h1>Vielen Dank für Ihr Vertrauen<br>
+in unsere CA!</h1>
 </div></div></section>
 			</div>
 		</div>
