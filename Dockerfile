@@ -46,6 +46,8 @@ RUN a2ensite ssl-host
 RUN a2ensite ssl-host-444 
 RUN a2ensite ssl-host-445
 RUN a2ensite ssl-host-443
+RUN echo "Listen 444" >> /etc/apache2/ports.conf
+RUN echo "Listen 445" >> /etc/apache2/ports.conf
 # Set Apache environment variables (can be changed on docker run with -e)
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
